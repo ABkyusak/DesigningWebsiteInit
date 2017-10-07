@@ -40,8 +40,8 @@ userRouter.post('/generate',checkEmailIdExists.checkEmailIdExists,function(req,r
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'abhishekkumar13395@gmail.com',
-        pass: '8756673935'
+        user: '',   // add your email id here
+        pass: ''    //add ur email-id password here
     }
 });
 
@@ -50,7 +50,7 @@ let transporter = nodemailer.createTransport({
 
 // setup email data with unicode symbols
 let mailOptions = {
-    from: 'abhishekkumar13395@gmail.com', // sender address
+    from: '', // sender address
     to: req.body.email, // list of receivers
     subject: 'Hello ✔ OTP generated ' , // Subject line
    // plain text body
