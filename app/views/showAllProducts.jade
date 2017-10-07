@@ -1,0 +1,14 @@
+
+ul
+  for item in user
+    li= item.product_name
+    li= item.p_company_name
+    li
+    a(href="http://localhost:3000/cart/AddToCart/#{item.product_id}") Add to Cart
+
+    li
+    a(href="http://localhost:3000/cart/RemoveFromCart/#{item.product_id}") Remove From Cart
+
+   
+    li= item.product_id 
+    <br />
